@@ -1,0 +1,36 @@
+@import '../../variables';
+
+:host {
+  flex-flow: column wrap;
+
+  .information {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    & > div {
+
+      & > h1 {
+        font-size: 4.8rem;
+        color: $primary-red;
+      }
+
+      & > h2 {
+        font-size: 2rem;
+        color: $primary-gold;
+        margin-bottom: 4.8rem;
+      }
+    }
+
+    & > .logo-container {
+      display: flex;
+      
+      & > .logo {
+        @include image-2x('../../assets/images/fifa-world-cup-2018-russia-logo-copy@2x.png', 68px, 75px);
+        width: 68px;
+        height: 75px;
+        background-size: cover;
+      }
+    }
+  }
+}

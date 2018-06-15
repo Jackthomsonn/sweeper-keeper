@@ -1,0 +1,81 @@
+@import '../../variables';
+
+:host {
+
+  & > div {
+    margin-top: 1.6rem;
+
+    &:nth-of-type(even) {
+      & > div {
+        background: $primary-red;
+      }
+
+      .info-bar {
+        display: flex;
+        background: $pale-red;
+    
+        & > span {
+          font-size: 1.6rem;
+          color: #000;
+        }
+      }
+
+      & > div > div > .score {
+        background: $pale-red;
+      }
+    }
+    
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: $primary-blue;
+      height: 5.4rem;
+      padding: 1.6rem;
+
+      & > span {
+        font-size: 2rem;
+        color: #FFF;
+        height: 5.4rem;
+        display: flex;
+        align-items: center;
+        flex: 0 1 100%;
+
+        &:nth-of-type(2) {
+          justify-content: flex-end;
+        }
+
+      }
+
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 178px;
+        min-width: 178px;
+
+        & > span {
+          @extend span;
+          width: 100%;
+          justify-content: center;
+
+          &.score {
+            background: $pale-blue;
+            color: #000;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .info-bar {
+      display: flex;
+      background: $pale-blue;
+  
+      & > span {
+        font-size: 1.6rem;
+        color: #000;
+      }
+    }
+  }
+}

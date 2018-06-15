@@ -1,0 +1,35 @@
+<div *ngFor="let fixture of fixtures">
+  <div>
+    <span>
+      {{ fixture.team1.name }}
+    </span>
+
+    <span>
+      <img src="../../assets/images/avatars/{{ fixture.team1.owner }}.png" />
+    </span>
+
+    <div>
+      <span class='score'>
+        {{ fixture.team1.goals }}
+      </span>
+
+      <span class='score'>
+        {{ fixture.team2.goals }}
+      </span>
+    </div>
+
+    <span>
+        <img src="../../assets/images/avatars/{{ fixture.team2.owner }}.png" />
+    </span>
+
+    <span>
+      {{ fixture.team2.name }}
+    </span>
+  </div>
+
+  <div class="info-bar">
+    <span>{{ fixture.date | date }}</span>
+    <span>{{ fixture.location }}</span>
+
+  </div>
+</div>

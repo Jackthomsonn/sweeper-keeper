@@ -1,0 +1,65 @@
+@import '../../variables';
+
+:host {
+  display: flex;
+  flex-flow: column wrap;
+  background: #FFF;
+  margin-top: 4.8rem;
+
+  thead {
+    display: flex;
+    background: $primary-gold;
+    padding: 1.6rem;
+
+    & > th {
+      flex: 1 0 100px;
+      text-align: left;
+      font-size: 2rem;
+      color: black;
+
+      &:nth-of-type(1) {
+        flex: 1 0 250px;
+      }
+
+      &:nth-of-type(2) {
+        flex: 1 0 385px;
+      }
+    }
+  }
+
+  tbody {
+    display: flex;
+    flex-flow: column wrap;
+
+    & > tr {
+      display: flex;
+      background: #EEE;
+      align-items: center;
+
+      &:nth-of-type(even){
+        background: #f5f5f5;
+      }
+
+      td {
+        flex: 1 0 100px;
+        text-align: left;
+        font-size: 2rem;
+        padding: 1.6rem;
+        height: 58px;
+
+        &:nth-of-type(1) {
+          flex: 1 0 250px;
+        }
+
+        &:nth-of-type(2) {
+          flex: 1 0 385px;
+        }
+
+        &:last-child{
+          text-align: center;
+          background: $pale-gold;
+        }
+      }
+    }
+  }
+}

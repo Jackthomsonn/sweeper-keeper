@@ -1,0 +1,25 @@
+<thead>
+  <th>Team</th>
+  <th>Owner</th>
+  <th>Wins</th>
+  <th>Draws</th>
+  <th>Losses</th>
+  <th>GF</th>
+  <th>GA</th>
+  <th>GD</th>
+  <th>Points</th>
+</thead>
+
+<tbody>
+  <tr *ngFor="let result of tableResults">
+    <td>{{ result.name }}</td>
+    <td>{{ result.owner }}</td>
+    <td>{{ result.wins }}</td>
+    <td>{{ result.draws }}</td>
+    <td>{{ result.losses }}</td>
+    <td>{{ result.goalsFor }}</td>
+    <td>{{ result.goalAgainst }}</td>
+    <td>{{ result.goalDifference }}</td>
+    <td>{{ result.points }}</td>
+  </tr>
+</tbody>
