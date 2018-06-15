@@ -4,10 +4,10 @@ const app = new express()
 const cluster = require('cluster')
 const os = require('os')
 
-app.use(express.static(__dirname + '/dist/team-hydr8'))
+app.use(express.static(__dirname + '/dist/sweeper-keeper'))
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname + '/dist/team-hydr8/index.html'))
+  res.sendFile(path.join(__dirname + '/dist/sweeper-keeper/index.html'))
 })
 
 if (cluster.isMaster) {
