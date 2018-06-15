@@ -18,7 +18,7 @@ export class SweeperKeeperService {
   public sweepers: Subject<IGroup> = new Subject<IGroup>();
 
   constructor(private http: HttpClient) {
-    this.uri = 'https://sweeper-keeper-api-djbesvsrnj.now.sh/groups';
+    this.uri = 'https://sweeper-keeper-api-euueqpwsaq.now.sh/groups';
     this.sweepInstance = timer(30000);
   }
 
