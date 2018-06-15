@@ -18,7 +18,7 @@ export class SweeperKeeperService {
   public sweepers: Subject<IGroup> = new Subject<IGroup>();
 
   constructor(private http: HttpClient) {
-    this.uri = 'https://sweeper-keeper-api-euueqpwsaq.now.sh/groups';
+    this.uri = 'https://sweeper-keeper-api-ffnamczxyg.now.sh/groups';
     this.sweepInstance = timer(30000);
   }
 
@@ -31,7 +31,7 @@ export class SweeperKeeperService {
     this.sweepInstance.subscribe(() => {
       this.getGroups().subscribe((sweepers: IGroup) => {
         if (this.groupIds.length - 1 === this.groupIndex) {
-          this.groupIndex = 0;
+          this.groupIndex = -1;
         }
         this.sweepers.next(sweepers);
         this.startPolling();
